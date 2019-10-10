@@ -1,10 +1,15 @@
+/*!**  Var **!*/
+
+/*:root {*/
+/*    --initial-page-size: 680px;*/
+/*}*/
 
 
-/** Contenering **/
+
+/*!** Contenering **!*/
 .lead {
     margin-bottom: 20px;
     font-size: xx-large;
-    font-weight: 300;
     line-height: 1.4;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -14,22 +19,25 @@
 }
 
 
+/*.bg{*/
+/*    !* The image used *!*/
+/*    background-image: url("img/img_bg.jpg");*/
+/*    !* Full height *!*/
+/*    height: 100%;*/
+/*    margin: 0;*/
+/*    !*!* Center and scale the image nicely *!*!*/
+/*    background-position: center;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*}*/
+
 .bg{
-    /* The image used */
-    background-image: url("img/img_bg.jpg");
-
-    /* Full height */
-    height: 100%;
-    margin: 0;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-body, html {
-    height: 100%;
-    margin: 0;
+    min-width: 100%;
+    min-height: 680px;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-top: -8px;
+    background-image: url('img/img_bg.jpg');
 }
 
 .my-button {
@@ -52,25 +60,29 @@ body, html {
     text-align: center;
 }
 
-.navbar {
-    border: 0px;
-    background-color: #222222;
-    position: absolute;
-    top: 100%;
-    right: 5%;
-    width: 110px;
-    z-index: 999;
-}
+/*.navbar {*/
+/*    border: 0px;*/
+/*    background-color: #222222;*/
+/*    position: absolute;*/
+/*    top: 100%;*/
+/*    right: 5%;*/
+/*    width: 110px;*/
+/*    z-index: 999;*/
+/*}*/
 
 .ul-style{
     list-style-type: none;
-    margin: 0;
+    top: 0;
     padding: 0;
     overflow: hidden;
     background-color: #111;
-    position: fixed;
-    bottom: 0;
     width: fit-content;
+}
+
+.nav-sticky{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px; /* required */
 }
 
 .li-default{
@@ -81,14 +93,15 @@ body, html {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 20px 15px 15px;
     text-decoration: solid;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
 }
 
 .li-a:hover:not(.active) {
-    background-color: #111;
+    background-color: #130F13;
 }
+
 
 .active {
     background-color: #22A39F;
@@ -110,14 +123,12 @@ body, html {
 /**  Sizing **/
 .max-width{
     width: 100%;
+    margin: 0;
 }
 
 .size_40x40{
     min-height: 40px;
     min-width: 40px;
-}
-.suitable-height{
-    height: 670px;
 }
 
 .name-size{
@@ -140,7 +151,7 @@ body, html {
 a:link, a:visited {
     color: ghostwhite;
     text-decoration: none;
-    cursor: auto;
+    cursor: pointer;
 }
 
 a:link:active, a:visited:active {
