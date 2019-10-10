@@ -3,6 +3,8 @@
 :root {
     --max-content: -8px;
     --max-bg-height: 680px;
+    --main-color: #22A39F;
+    --main-font: Arial, Helvetica, sans-serif !important;;
 }
 
 
@@ -12,10 +14,22 @@
     margin-bottom: 20px;
     font-size: xx-large;
     line-height: 1.4;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.lead-profile{
+    text-align: center;
+    color: #9ba09f;
+    margin-left: 7%;
+    font-size: 3vh;
 }
 .container {
     position: page;
+    text-align: center;
+}
+
+.profile-container{
+    position: page;
+    width: 100%;
     text-align: center;
 }
 
@@ -65,12 +79,18 @@ ul {
     width: fit-content;
 }
 
-.nav-sticky{
+#sections{
     position: sticky;
     position: -webkit-sticky;
     top: 0;
     float: right;
     right: 5%;
+    -webkit-animation: mymove 1s ease-in;
+    -webkit-animation-iteration-count: 10;
+    animation: mymove 1s;
+    animation-iteration-count: 10;
+}
+.nav-sticky{
 }
 
 .li-default{
@@ -92,7 +112,7 @@ ul {
 
 
 .active {
-    background-color: #22A39F;
+    background-color: var(--main-color);
 }
 /****** Positioning *****/
 .centered {
@@ -124,6 +144,13 @@ ul {
     font-family: 'Open Sans', sans-serif !important
 }
 
+.profile-name{
+    font-size: 30px; /** for old versions **/
+    font-size: 4.5vw;
+    font-weight: 300;
+    color: var(--main-color);
+    margin-left: 7%;
+}
 
 
 /* Customing **/
@@ -136,6 +163,10 @@ ul {
     color: white;
 }
 
+.my-font{
+    font-family: var(--main-font);
+}
+
 a:link, a:visited {
     color: ghostwhite;
     text-decoration: none;
@@ -146,26 +177,15 @@ a:link:active, a:visited:active {
     color: ghostwhite;
 }
 
-
-.arrow-rai-rotate {
-    margin: 2px;
-    line-height: 1.5;
-    border: 2px solid #0066cc;
-    border-radius: .2rem;
-    background-color: #0066cc;
-    padding: 0.25rem 0.5rem;
-    font-size: .875rem;
-    display: inline-block;
-}
-
-
 /****  Animiation **/
 
 @-webkit-keyframes mymove {
-    50% {top: 300px;}
+    from {top: 0;}
+    to {top: 30px;}
 }
 
 /* Standard syntax */
 @keyframes mymove {
-    50% {top: 300px;}
+    from {top: 0;}
+    to {top: 30px;}
 }
