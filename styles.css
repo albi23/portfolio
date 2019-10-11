@@ -1,7 +1,6 @@
 /*!**  Var **!*/
 
 :root {
-    --max-content: -8px;
     --main-color: #22A39F;
     --main-text-color: #434242;
     --main-font: Arial, Helvetica, sans-serif !important;
@@ -27,7 +26,7 @@
     text-align: center;
 }
 
-.profile-container {
+.default-container {
     position: page;
     width: 100%;
     text-align: center;
@@ -40,9 +39,9 @@
 .bg {
     min-width: 100%;
     min-height: 100vh;
-    margin-left: var(--max-content);
-    margin-right: var(--max-content);
-    margin-top: var(--max-content);
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
     background-image: url('img/img_bg.jpg');
 }
 
@@ -69,7 +68,7 @@
     margin: 0;
 }
 
-ul {
+html, body,div, ul{
     margin: 0;
 }
 
@@ -219,6 +218,9 @@ ul {
     font-weight: 200;
 }
 
+.weight-x1 {
+    font-weight: 100;
+}
 .weight-x4 {
     font-weight: 400;
 }
@@ -242,6 +244,9 @@ ul {
     margin-left: 5%;
 }
 
+.margin-left-x7 {
+    margin-left: 7%;
+}
 .margin-bottom-x5 {
     margin-bottom: 5%;
 }
@@ -344,3 +349,14 @@ a:link:active, a:visited:active {
     /*-- our gutter --*/
     padding: 12px;
 }
+
+
+/*** Colors **/
+.light-yellow-bg{
+    background-color: #f3efe0;
+}
+
+.light-grey{
+    color: #727878;
+}
+
