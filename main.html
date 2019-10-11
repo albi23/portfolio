@@ -20,7 +20,7 @@
         </a>
     </div>
 </div>
-<nav class="nav-sticky" id="sections">
+<nav class="nav-sticky" style="z-index: 200" id="sections">
     <div class="nav-container">
         <ul class="ul-style">
             <li class="li-default li-a active"><a class="active" href="/">Profile</a></li>
@@ -37,10 +37,10 @@
     <p class="lead-profile my-font">I'm a creative Full Stack Developer</p>
     <hr class="hr-light">
     <div class="grid-container text-centered">
-        <div class="row">
-            <div class="col-2">
-                <h3 class="headers">About me</h3>
-                <p>
+        <div class="row" style="margin-left: 15%">
+            <div class="col-3" style="width: 33%">
+                <h3 class="headers text-centered margin-bottom-x5">About me</h3>
+                <p class="text-left default-text default-margin-text">
                     I am an allround web developer.
                     I am a junior programmer with good knowledge of front-end and back-end techniques.
                     I love structure and order and I also stand for quality.
@@ -49,8 +49,31 @@
                     As the saying goes: 'two heads are better than one'.
                 </p>
             </div>
-            <div class="col-2" style="text-align: center">
-                <img src="img/portfolio_img.jpg" alt="photo" style="border-radius: 50%; max-width: 246px; max-height: 246px">
+            <div class="col-2" style="text-align: center;width: 25%">
+                <img src="img/portfolio_img.jpg" alt="photo" class="img-profile">
+            </div>
+            <div class="col-3" style="width: 33.33%;">
+                <h3 class="headers text-left" style="padding-top: 0; margin-top: 0; text-align: left; margin-bottom: 5px"> Details</h3>
+                <table>
+                    <tr>
+                        <th class="text-left weight-x6 default-text-size">Name :</th>
+                    </tr>
+                    <tr>
+                        <td class="default-text default-weight text-left">Albert Piekielny</td>
+                    </tr>
+                    <tr>
+                        <th class="text-left weight-x6 default-text-size">Age</th>
+                    </tr>
+                    <tr>
+                        <td class="default-text default-weight text-left">21 years</td>
+                    </tr>
+                    <tr>
+                        <th class="text-left weight-x6 default-text-size">Location</th>
+                    </tr>
+                    <tr>
+                        <td class="default-text default-weight"> Wrocław, Poland </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>

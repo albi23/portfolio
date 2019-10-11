@@ -4,6 +4,7 @@
     --max-content: -8px;
     --max-bg-height: 680px;
     --main-color: #22A39F;
+    --main-text-color: #434242;
     --main-font: Arial, Helvetica, sans-serif !important;;
 }
 
@@ -18,7 +19,7 @@
 
 .lead-profile{
     text-align: center;
-    color: #9ba09f;
+    color: var(--main-text-color);
     margin-left: 7%;
     font-size: 3vh;
 }
@@ -117,6 +118,14 @@ ul {
 .active {
     background-color: var(--main-color);
 }
+
+.img-profile{
+    border-radius: 50%;
+    width: 20vw;
+    height: 20vw;
+    max-width: 246px;
+    max-height: 246px
+}
 /****** Positioning *****/
 .centered {
     position: absolute;
@@ -181,6 +190,38 @@ ul {
 
 .text-centered{
     text-align: center;
+    margin: auto;
+}
+
+.text-left{
+    text-align: left;
+    margin: auto;
+}
+
+.default-text-size{
+    font-size: 1.5vw;
+}
+.default-text{
+    color: var(--main-text-color);
+    font-weight: 200;
+    font-size: 1.5vw;
+    margin: auto;
+}
+
+.default-margin-text{
+    margin: 0 0 10px;
+}
+
+.default-weight{
+    font-weight: 200;
+}
+
+.weight-x4{
+    font-weight: 400;
+}
+
+.weight-x6{
+    font-weight: 600;
 }
 .hr-light{
     opacity: 0.2;
@@ -189,7 +230,17 @@ ul {
     width: 70%;
 }
 
+.margin-left-x5{
+    margin-left: 5%;
+}
 
+.margin-bottom-x5{
+    margin-bottom: 5%;
+}
+
+.width-x33{
+    width: 33%;
+}
 a:link, a:visited {
     color: ghostwhite;
     text-decoration: none;
@@ -217,7 +268,7 @@ a:link:active, a:visited:active {
 .grid-container {
     width : 100%;
     max-width : 1200px;
-}
+    }
 .row:before,
 .row:after {
     content:"";
