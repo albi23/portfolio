@@ -391,7 +391,9 @@ html{
 .col-1 {
     width: 16.66%;
 }
-
+.col-1-2 {
+    width: 25%;
+}
 .col-2 {
     width: 33.33%;
 }
@@ -426,6 +428,9 @@ html{
     color: #727878;
 }
 
+.lighter-grey{
+    color: #bcbdbd;
+}
 .main-color{
     color: #22A39F;
 }
@@ -433,12 +438,14 @@ html{
 
 .full-stars {
     content: "\2605";
-    margin: 2px;
-    font-size: 1.0em;
+    font-size: 1.3em;
     float: left;
     font-family: Arial, Helvetica, sans-serif;
     display: inline-block;
-    color: var(--main-color);
+}
+.test:hover{
+    width: content-box;
+    background-color: hsla(180, 1%, 83%, 0.50);
 }
 /*.my-rating{*/
 /*    border: none;*/
