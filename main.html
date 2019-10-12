@@ -15,7 +15,7 @@
         <p class="lead white-text my-font">Interactive resume</p>
     </div>
     <div class="bottom-right" id="but1">
-        <a href="#" class="my-button">
+        <a href="#profile" class="my-button default-a">
             <img src="img/25415.svg" alt="Arrow" class="img_arrow">
         </a>
     </div>
@@ -23,16 +23,16 @@
 <nav class="nav-sticky" style="z-index: 200" id="sections">
     <div class="nav-container">
         <ul class="ul-style">
-            <li class="li-default li-a active"><a class="active" href="/">Profile</a></li>
-            <li class="li-default li-a"><a href="/">Experiences</a></li>
-            <li class="li-default li-a"><a href="/">Abilities</a></li>
-            <li class="li-default li-a"><a href="/">Projects</a></li>
-            <li class="li-default li-a"><a href="/">Contact</a></li>
+            <li class="li-default li-a active"><a class="active default-a" href="#profile">Profile</a></li>
+            <li class="li-default li-a"><a class="default-a" href="#">Experiences</a></li>
+            <li class="li-default li-a"><a class="default-a" href="/">Abilities</a></li>
+            <li class="li-default li-a"><a class="default-a" href="/">Projects</a></li>
+            <li class="li-default li-a"><a class="default-a" href="/">Contact</a></li>
         </ul>
     </div>
 </nav>
 
-<div id="profile" class="default-container">
+<div id="profile">
     <h2 class="profile-name my-font">Profile</h2>
     <p class="lead-profile my-font">I'm a creative Full Stack Developer</p>
     <hr class="hr-light">
@@ -74,8 +74,10 @@
                         <td class="default-text default-weight"> Wrocław, Poland </td>
                     </tr>
                     <tr>
-                       <td>
-                           <a href="#" class="lin-button">LinkedIn</a>
+                       <td style="text-align: left; padding: 0">
+                           <div class="linked-in-btn">
+                               <INPUT type="submit" name="linkedInN" value="">
+                               <a class="linked-in-txt weight-x1 default-text default-a" style="color: #3a3a3a; size: 200px" href="https://www.linkedin.com/in/albert-piekielny/">Find Me!</a></div>
                        </td>
                     </tr>
                 </table>
@@ -83,15 +85,133 @@
         </div>
     </div>
 </div>
-<div class="default-container light-yellow-bg" id="experience">
+<div class="light-yellow-bg" id="experience">
     <h2 class="profile-name my-font default-weight">Experience</h2>
     <section class="my-font default-weight">
         <p class="light-grey margin-left-x7 default-text-size">“Imagination is more important than knowledge.“</p>
         <p class="light-grey margin-left-x7 default-text-size">Albert Einstein</p>
         <hr class="hr-light">
     </section>
+    <div class="grid-container text-centered padding-top-x20">
+        <div class="row margin-left-x10">
+            <h2 class="default-weight education-header text-left ">Education</h2>
+        </div>
+        <div class="row margin-left-x10" >
+            <div class="row padding-top-x20">
+                <div class="col-2">
+                    <p class="text-left text-left default-headers-size my-font weight-x6">Wroclaw University of Science and Technology</p>
+                </div>
+                <div class="col-3 margin-left-x2">
+                    <p class="text-left default-headers-size my-font weight-x6">Engineer - Algorithmic Computer Science</p>
+                </div>
+            </div>
+        </div>
+        <div class="row margin-left-x10 padding-top-x10">
+            <div class="row">
+                <div class="col-2">
+                    <p class="text-left text-left default-content-size my-font "> October 2017 - Present</p>
+                </div>
+                <div class="col-3 margin-left-x2">
+                    <p class="text-left default-content-size my-font ">
+                        The university focuses on teaching a significant number of used algorithms
+                        and learning about a large number of languages, including: Java, Go, C, C ++,
+                        Bash, Julia, OpenGL, SQL. In the study program, there were also additional
+                        UML diagrams and design patterns.</p>
+                    <p class="text-left default-content-size my-font margin-top-p10 ">
+                        <img src="img/location.svg" alt="link" class="small-icon">
+                        <i class="text-left default-content-size my-font main-color ">Wroclaw |</i>
+                        <img src="img/link.svg" alt="link" class="small-icon">
+                        <a class="colored-link " href="http://pwr.edu.pl/en/">http://pwr.edu.pl/en</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row margin-left-x10 padding-top-x20" >
+            <div class="row">
+                <div class="col-2">
+                    <p class="text-left text-left default-headers-size my-font weight-x6">I General High School in Wieluń</p>
+                </div>
+                <div class="col-3 margin-left-x2">
+                    <p class="text-left default-headers-size my-font weight-x6">Math-Physic Profile</p>
+                </div>
+            </div>
+        </div>
+        <div class="row margin-left-x10 padding-top-x10">
+            <div class="row">
+                <div class="col-2">
+                    <p class="text-left text-left default-content-size my-font "> September 2015 - April 2017</p>
+                </div>
+                <div class="col-3 margin-left-x2">
+                    <p class="text-left default-content-size my-font ">
+                        I graduated from high school with honors, where I mainly liked science and mathematics.
+                        In addition, I showed sporting achievements in relay races.
+                        I realized in my third year of school that I wanted to do something with computer science
+                    </p>
+                    <p class="text-left default-content-size my-font margin-top-p10 ">
+                        <img src="img/location.svg" alt="link" class="small-icon">
+                        <i class="text-left default-content-size my-font main-color ">Wieluń |</i>
+                        <img src="img/link.svg" alt="link" class="small-icon">
+                        <a class="colored-link " href="http://www.lowielun.eu/index.php/en/">http://www.lowielun.eu</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="hr-light margin-top-p20">
+
+    <div class="grid-container text-centered padding-top-x20">
+        <div class="row margin-left-x10">
+            <h2 class="default-weight education-header text-left ">Carriers</h2>
+        </div>
+        <div class="row margin-left-x10" >
+            <div class="row padding-top-x20">
+                <div class="col-2">
+                    <p class="text-left text-left default-headers-size my-font weight-x6">Blue Veery GmbH</p>
+                </div>
+                <div class="col-3 margin-left-x2">
+                    <p class="text-left default-headers-size my-font weight-x6">Junior Full Stack Developer</p>
+                </div>
+            </div>
+        </div>
+        <div class="row margin-left-x10 padding-top-x10">
+            <div class="row">
+                <div class="col-2">
+                    <p class="text-left text-left default-content-size my-font "> February 2019 - Present</p>
+                </div>
+                <div class="col-3 margin-left-x2">
+                    <p class="text-left default-content-size my-font ">
+                        Work in a young and dynamic team under the guidance of a very experienced architect.
+                        Developing applications for a pharmaceutical giant in technologies such as Java 8, Angular, MySql.
+                        Developing your skills in the latest front and back end technologies
+                    </p>
+                    <p class="text-left default-content-size my-font margin-top-p10 ">
+                        <img src="img/location.svg" alt="link" class="small-icon">
+                        <i class="text-left default-content-size my-font main-color ">Wroclaw |</i>
+                        <img src="img/link.svg" alt="link" class="small-icon">
+                        <a class="colored-link " href="http://blue-veery.com/">http://blue-veery.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section>
+    </section>
 </div>
-<p>Test</p>
+
+
+<fieldset class="rating">
+    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+</fieldset>
+<p>http://www.lowielun.eu/index.php/en/</p>
 <p>Test</p>
 <p>Test</p>
 <p>Test</p>

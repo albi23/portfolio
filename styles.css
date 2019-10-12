@@ -26,12 +26,17 @@
     text-align: center;
 }
 
-.default-container {
+#experience {
     position: page;
     width: 100%;
     text-align: center;
 }
 
+#profile {
+    position: page;
+    width: 100%;
+    text-align: center;
+}
 .nav-container {
     float: right;
 }
@@ -60,6 +65,17 @@
     padding: 10px 30px;
 }
 
+div.linked-in-btn input {
+    background:url('img/linkedIn.svg') no-repeat;
+    cursor:pointer;
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+.linked-in-txt{
+    font-size: 4.2vh;
+}
 
 .img_arrow {
     -webkit-filter: invert(100%);
@@ -70,6 +86,10 @@
 
 html, body,div, ul{
     margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 .ul-style {
@@ -127,6 +147,10 @@ html, body,div, ul{
     max-height: 246px
 }
 
+.small-icon{
+    max-width: 12px;
+    max-height: 12px
+}
 /****** Positioning *****/
 .centered {
     position: absolute;
@@ -166,6 +190,11 @@ html, body,div, ul{
     margin-left: 7%;
 }
 
+.education-header{
+    color: var(--main-color);
+    font-size: 2.5vw;
+}
+
 
 /* Customing **/
 .lighten {
@@ -202,6 +231,17 @@ html, body,div, ul{
 .default-text-size {
     font-size: 1.5vw;
 }
+.default-headers-size {
+    font-size: 1.2vw;
+    line-height: 1.4;
+}
+
+.default-content-size {
+    font-size: 1.1vw;
+    line-height: 1.4;
+    color: var(--main-text-color);
+
+}
 
 .default-text {
     color: var(--main-text-color);
@@ -229,6 +269,13 @@ html, body,div, ul{
     font-weight: 600;
 }
 
+.padding-top-x20{
+    padding-top: 20px;
+}
+
+.padding-top-x10{
+    padding-top: 10px;
+}
 .hr-light {
     opacity: 0.2;
     border-color: #727878;
@@ -247,6 +294,10 @@ html, body,div, ul{
 .margin-left-x7 {
     margin-left: 7%;
 }
+
+.margin-left-x10 {
+    margin-left: 10%;
+}
 .margin-bottom-x5 {
     margin-bottom: 5%;
 }
@@ -255,20 +306,32 @@ html, body,div, ul{
     margin-top: 1%;
 }
 
+.margin-top-p20 {
+    margin-top: 20px;
+}
+
+.margin-top-p10 {
+    margin-top: 10px;
+}
 .width-x33 {
     width: 33%;
 }
 
-a:link, a:visited {
+.default-a{
     color: ghostwhite;
     text-decoration: none;
     cursor: pointer;
 }
 
-a:link:active, a:visited:active {
+.default-a :link:active, .default-a:visited:active {
     color: ghostwhite;
 }
 
+.colored-link{
+    color: var(--main-color);
+    text-decoration: underline;
+    cursor: pointer;
+}
 /****  Animiation **/
 
 @-webkit-keyframes mymove {
@@ -342,14 +405,6 @@ a:link:active, a:visited:active {
     box-sizing: border-box;
 }
 
-[class*='col-'] {
-    float: left;
-    min-height: 1px;
-    width: 16.66%;
-    /*-- our gutter --*/
-    padding: 12px;
-}
-
 
 /*** Colors **/
 .light-yellow-bg{
@@ -360,3 +415,32 @@ a:link:active, a:visited:active {
     color: #727878;
 }
 
+.main-color{
+    color: #22A39F;
+}
+
+
+/*.btn-group button {*/
+/*    background-color: #4CAF50; !* Green background *!*/
+/*    border: 1px solid green; !* Green border *!*/
+/*    color: white; !* White text *!*/
+/*    padding: 10px 24px; !* Some padding *!*/
+/*    cursor: pointer; !* Pointer/hand icon *!*/
+/*    float: left; !* Float the buttons side by side *!*/
+/*}*/
+
+/*.btn-group button:not(:last-child) {*/
+/*    border-right: none; !* Prevent double borders *!*/
+/*}*/
+
+/*!* Clear floats (clearfix hack) *!*/
+/*.btn-group:after {*/
+/*    content: "";*/
+/*    clear: both;*/
+/*    display: table;*/
+/*}*/
+
+/*!* Add a background color on hover *!*/
+/*.btn-group button:hover {*/
+/*    background-color: #3e8e41;*/
+/*}*/
