@@ -44,6 +44,12 @@
     text-align: center;
 }
 
+#projects{
+    position: page;
+    width: 100%;
+    text-align: center;
+}
+
 .nav-container {
     float: right;
 }
@@ -447,77 +453,3 @@ html{
     width: content-box;
     background-color: hsla(180, 1%, 83%, 0.50);
 }
-/*.my-rating{*/
-/*    border: none;*/
-/*    float: left;*/
-/*    content: "\f089";*/
-/*    position: absolute;*/
-/*}*/
-
-/*.my-label{*/
-/*    margin: 5px;*/
-/*    font-size: 1.25em;*/
-/*    font-family: FontAwesome;*/
-/*    display: inline-block;*/
-/*    content: "\f005";*/
-/*}*/
-
-/*.rating {*/
-/*    border: none;*/
-/*    float: left;*/
-/*}*/
-
-/*.rating > input { display: none; }*/
-/*.rating > label:before {*/
-/*    margin: 5px;*/
-/*    font-size: 1.25em;*/
-/*    font-family: FontAwesome;*/
-/*    display: inline-block;*/
-/*    content: "\f005";*/
-/*}*/
-
-/*.rating > .half:before {*/
-/*    content: "\f089";*/
-/*    position: absolute;*/
-/*}*/
-
-/*.rating > label {*/
-/*    color: #ddd;*/
-/*    float: right;*/
-/*}*/
-
-/*!***** CSS Magic to Highlight Stars on Hover *****!*/
-
-/*.rating > input:checked ~ label, !* show gold star when clicked *!*/
-/*.rating:not(:checked) > label:hover, !* hover current star *!*/
-/*.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } !* hover previous stars in list *!*/
-
-/*.rating > input:checked + label:hover, !* hover current star when changing rating *!*/
-/*.rating > input:checked ~ label:hover,*/
-/*.rating > label:hover ~ input:checked ~ label, !* lighten current selection *!*/
-/*.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }*/
-
-/*.btn-group button {*/
-/*    background-color: #4CAF50; !* Green background *!*/
-/*    border: 1px solid green; !* Green border *!*/
-/*    color: white; !* White text *!*/
-/*    padding: 10px 24px; !* Some padding *!*/
-/*    cursor: pointer; !* Pointer/hand icon *!*/
-/*    float: left; !* Float the buttons side by side *!*/
-/*}*/
-
-/*.btn-group button:not(:last-child) {*/
-/*    border-right: none; !* Prevent double borders *!*/
-/*}*/
-
-/*!* Clear floats (clearfix hack) *!*/
-/*.btn-group:after {*/
-/*    content: "";*/
-/*    clear: both;*/
-/*    display: table;*/
-/*}*/
-
-/*!* Add a background color on hover *!*/
-/*.btn-group button:hover {*/
-/*    background-color: #3e8e41;*/
-/*}*/
