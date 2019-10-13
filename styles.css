@@ -194,6 +194,11 @@ html{
     min-width: 8vh;
 }
 
+.little-middle-icon{
+    max-width: 6vh;
+    max-height: 6vh;
+}
+
 .big-flex-icon{
     max-width: 35vh;
     max-height: 35vh
@@ -243,6 +248,13 @@ html{
     margin-left: 7%;
 }
 
+.contact-name {
+    font-size: 30px; /** for old versions **/
+    font-size: 4.5vw;
+    font-weight: 300;
+    color: var(--main-color);
+    margin-left: 3%;
+}
 .education-header{
     color: var(--main-color);
     font-size: 2.5vw;
@@ -293,7 +305,12 @@ html{
     font-size: 1.1vw;
     line-height: 1.4;
     color: var(--main-text-color);
+}
 
+.info-text-size {
+    font-size: 1.8vw;
+    line-height: 1.4;
+    color: var(--main-text-color);
 }
 
 .default-text {
@@ -366,7 +383,9 @@ html{
 .margin-top-x1 {
     margin-top: 1%;
 }
-
+.margin-top-x10 {
+    margin-top: 10%;
+}
 .margin-top-p20 {
     margin-top: 20px;
 }
