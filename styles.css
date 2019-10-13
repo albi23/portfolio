@@ -55,13 +55,12 @@
 }
 
 #projects{
-    position: page;
     width: 100%;
     text-align: center;
 }
 
 #contact{
-    position: page;
+    padding-top: 2%;
     width: 100%;
     text-align: center;
     background-color: #434242;
@@ -71,6 +70,10 @@
     float: right;
 }
 
+.fix-1{
+    min-height: 50px;
+    position: absolute
+}
 .bg {
     min-width: 100%;
     min-height: 100vh;
@@ -275,6 +278,10 @@ html{
     font-family: var(--main-font);
 }
 
+.linked-footer-flex{
+    font-size: 8vh;
+    min-height: 12vh;
+}
 .headers {
     color: var(--main-color);
     font-family: var(--main-font);
@@ -439,6 +446,7 @@ html{
     max-width: 1200px;
 }
 
+
 .row:before,
 .row:after {
     content: "";
@@ -497,6 +505,10 @@ html{
     color: #727878;
 }
 
+.little-dark-bg{
+    background-color: #434242;
+}
+
 .lighter-grey{
     color: #bcbdbd;
 }
@@ -504,6 +516,9 @@ html{
     color: #22A39F;
 }
 
+.lighter-grey-bg{
+    background-color: #c4c5c5;
+}
 .main-bg-color{
     background-color: #22A39F;
 }
@@ -511,6 +526,7 @@ html{
 .lighter-main-bg-color{
     background-color: hsla(176, 44%, 44%, 0.5);;
 }
+
 
 .full-stars {
     content: "\2605";

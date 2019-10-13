@@ -3,10 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Portfolio</title>
 </head>
 <body>
 
-<h1>HELLLLO!</h1>
+<header>
+    <div class="max-width">
+        <div class="row little-dark-bg">
+            <div class="col-6 text-centered headers main-color">
+                <h2>Barcode generator</h2>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="lighter-grey-bg">
+    <div class="max-width text-centered padding-top-x20">
+        <div class="row margin-left-x10">
+            <div class="row">
+                <div class="col-3">
+                    <h2 class="default-weight education-header text-left ">Description</h2>
+                </div>
+                <div class="col-3">
+                    <h2 class="default-weight education-header text-left ">Code example</h2>
+                </div>
+            </div>
+            <div class="row margin-top-p20 ">
+                <div class="col-1 text-left">
+                    Barcode generator is a project that was created because of the requirement to generate a significant number of bar codes and more.
+                    Most generators were limited to one time generating a single number of bar codes, so I decided to change it.
+                    This program allows you to choose one of nine types of bar codes to generate.
+                    In addition, it allows a number of modifications to the appearance of the bar code itself and preferences such as size, output format (.gif, .png, etc).
+                    The user defines whether he wants to get random data contained in the code or he defines its content.
+                    On exit, the user receives generated codes, which can also be combined into larger sheets.
+                </div>
+                <div class="col-4 margin-left-x10 text-left">
+                    <code>
+                        <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;
+                        border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre
+                                style="margin: 0; line-height: 125%">    <span
+                                style="color: #008800; font-weight: bold">private</span> <span
+                                style="color: #333399; font-weight: bold">boolean</span> <span
+                                style="color: #0066BB; font-weight: bold">validateChoosedImages</span><span
+                                style="color: #333333">(</span>String input<span style="color: #333333">,</span> <span
+                                style="color: #333399; font-weight: bold">int</span> max<span
+                                style="color: #333333">,</span> String<span style="color: #333333">...</span> args<span
+                                style="color: #333333">)</span> <span style="color: #333333">{</span>
+        StringBuilder builder <span style="color: #333333">=</span> <span
+                                    style="color: #008800; font-weight: bold">new</span> StringBuilder<span
+                                    style="color: #333333">();</span>
+        <span style="color: #008800; font-weight: bold">if</span> <span style="color: #333333">(</span>args <span
+                                    style="color: #333333">!=</span> <span style="color: #008800; font-weight: bold">null</span><span
+                                    style="color: #333333">)</span>
+            <span style="color: #008800; font-weight: bold">for</span> <span
+                                    style="color: #333333">(</span>String s <span
+                                    style="color: #333333">:</span> args<span
+                                    style="color: #333333">)</span> builder<span style="color: #333333">.</span><span
+                                    style="color: #0000CC">append</span><span style="color: #333333">(</span>s<span
+                                    style="color: #333333">);</span>
+
+        builder<span style="color: #333333">.</span><span style="color: #0000CC">insert</span><span
+                                    style="color: #333333">(</span><span
+                                    style="color: #0000DD; font-weight: bold">0</span><span
+                                    style="color: #333333">,</span> input<span style="color: #333333">);</span>
+        String<span style="color: #333333">[]</span> inputData <span style="color: #333333">=</span> fillWithComma<span
+                                    style="color: #333333">(</span>builder<span style="color: #333333">.</span><span
+                                    style="color: #0000CC">toString</span><span style="color: #333333">()).</span><span
+                                    style="color: #0000CC">split</span><span style="color: #333333">(</span><span
+                                    style="background-color: #fff0f0">&quot;,&quot;</span><span style="color: #333333">);</span>
+        validated <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">new</span> LinkedHashSet<span
+                                    style="color: #333333">&lt;&gt;();</span>
+
+        <span style="color: #008800; font-weight: bold">for</span> <span style="color: #333333">(</span>String s <span
+                                    style="color: #333333">:</span> inputData<span style="color: #333333">)</span> <span
+                                    style="color: #333333">{</span>
+            <span style="color: #008800; font-weight: bold">if</span> <span style="color: #333333">(</span>s<span
+                                    style="color: #333333">.</span><span style="color: #0000CC">contains</span><span
+                                    style="color: #333333">(</span><span
+                                    style="background-color: #fff0f0">&quot;-&quot;</span><span style="color: #333333">))</span> <span
+                                    style="color: #333333">{</span>
+                String<span style="color: #333333">[]</span> res <span style="color: #333333">=</span> s<span
+                                    style="color: #333333">.</span><span style="color: #0000CC">split</span><span
+                                    style="color: #333333">(</span><span
+                                    style="background-color: #fff0f0">&quot;-&quot;</span><span style="color: #333333">);</span>
+                <span style="color: #008800; font-weight: bold">for</span> <span style="color: #333333">(</span><span
+                                    style="color: #333399; font-weight: bold">int</span> i <span style="color: #333333">=</span> Integer<span
+                                    style="color: #333333">.</span><span style="color: #0000CC">parseInt</span><span
+                                    style="color: #333333">(</span>res<span style="color: #333333">[</span><span
+                                    style="color: #0000DD; font-weight: bold">0</span><span
+                                    style="color: #333333">]);</span> i <span style="color: #333333">&lt;=</span> Integer<span
+                                    style="color: #333333">.</span><span style="color: #0000CC">parseInt</span><span
+                                    style="color: #333333">(</span>res<span style="color: #333333">[</span><span
+                                    style="color: #0000DD; font-weight: bold">1</span><span
+                                    style="color: #333333">]);</span> i<span style="color: #333333">++)</span> <span
+                                    style="color: #333333">{</span>
+                    <span style="color: #008800; font-weight: bold">if</span> <span
+                                    style="color: #333333">(</span>i <span style="color: #333333">&gt;</span> max<span
+                                    style="color: #333333">)</span> <span style="color: #008800; font-weight: bold">return</span> <span
+                                    style="color: #008800; font-weight: bold">false</span><span
+                                    style="color: #333333">;</span>
+                    <span style="color: #008800; font-weight: bold">else</span> validated<span
+                                    style="color: #333333">.</span><span style="color: #0000CC">add</span><span
+                                    style="color: #333333">(</span>i<span style="color: #333333">);</span>
+                <span style="color: #333333">}</span>
+            <span style="color: #333333">}</span> <span style="color: #008800; font-weight: bold">else</span> <span
+                                    style="color: #333333">{</span>
+                validated<span style="color: #333333">.</span><span style="color: #0000CC">add</span><span
+                                    style="color: #333333">(</span>Integer<span style="color: #333333">.</span><span
+                                    style="color: #0000CC">parseInt</span><span style="color: #333333">(</span>s<span
+                                    style="color: #333333">));</span>
+            <span style="color: #333333">}</span>
+        <span style="color: #333333">}</span>
+        <span style="color: #008800; font-weight: bold">return</span> <span style="color: #008800; font-weight: bold">true</span><span
+                                    style="color: #333333">;</span>
+    <span style="color: #333333">}</span>
+</pre>
+                        </div>
+                    </code>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <a href="#" class="max-width default-a">
+        <div class="little-dark-bg text-centered my-font padding-top-x10 weight-x6 " style="font-size: 8vh; min-height: 12vh;">BACK</div>
+    </a>
+</footer>
 </body>
 </html>
