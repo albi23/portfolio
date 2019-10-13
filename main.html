@@ -5,6 +5,16 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet2" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Portfolio</title>
+
+    <script type="text/javascript">
+        const idActiveEl = "";
+        function over() {
+            document.getElementById("sections").style.cssText ="top:50px; z-index: 111"
+        }
+        function out() {
+            document.write ("Mouse Out");
+        }
+    </script>
 </head>
 <body>
 
@@ -20,7 +30,7 @@
         </a>
     </div>
 </div>
-<nav class="nav-sticky" style="z-index: 200" id="sections">
+<nav class="nav-sticky" id="sections" >
     <div class="nav-container">
         <ul class="ul-style">
             <li class="li-default li-a active"><a class="active default-a" href="#profile">Profile</a></li>
@@ -32,7 +42,7 @@
     </div>
 </nav>
 
-<div id="profile">
+<div id="profile" >
     <h2 class="profile-name my-font">Profile</h2>
     <p class="lead-profile my-font">I'm a creative Full Stack Developer</p>
     <hr class="hr-light">
@@ -580,7 +590,7 @@
                 <div class="row text-centered">
                     <div class="col-2 text-centered margin-left-x25">
                         <div class="container-projects">
-                            <a href="project-java.html">
+                            <a href="project-dental.html">
                                 <img src="img/clinic.jpg" class="big-flex-icon" title="Dental Clinic Database"
                                      alt="Image">
                                 <div class="top-right">
