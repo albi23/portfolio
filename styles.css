@@ -139,8 +139,6 @@ html{
     top: 50px;
     float: right;
     right: 5%;
-    /*-webkit-animation: mymove 1s ease-in;*/
-    /*animation: mymove 1s;*/
 }
 
 .nav-sticky {
@@ -155,13 +153,12 @@ html{
     display: block;
     color: white;
     text-align: center;
-    padding: 20px 15px 15px;
     text-decoration: solid;
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 .li-a:hover:not(.active) {
-    background-color: #130F13;
+    background-color: rgba(26, 224, 189, 0.3);
 }
 
 .row-x80 {
@@ -410,6 +407,10 @@ html{
     cursor: pointer;
 }
 
+.block-a{
+    padding: 2vw 1vw 1vw;
+    display: block
+}
 .default-a :link:active, .default-a:visited:active {
     color: ghostwhite;
 }

@@ -7,12 +7,19 @@
     <title>Portfolio</title>
 
     <script type="text/javascript">
-        const idActiveEl = "";
-        function over() {
-            document.getElementById("sections").style.cssText ="top:50px; z-index: 111"
-        }
-        function out() {
-            document.write ("Mouse Out");
+        let idActiveEl = 'prof';
+        function changeActive(isDiv) {
+            if (isDiv === idActiveEl) return;
+            let latest = document.getElementById(''+idActiveEl);
+            if (latest && latest.classList){
+                latest.classList.toggle('active');
+            }
+
+            let elem = document.getElementById(isDiv);
+            if (elem && elem.classList){
+                elem.classList.toggle('active');
+            }
+            idActiveEl = isDiv;
         }
     </script>
 </head>
@@ -33,11 +40,11 @@
 <nav class="nav-sticky" id="sections" >
     <div class="nav-container">
         <ul class="ul-style">
-            <li class="li-default li-a active"><a class="active default-a" href="#profile">Profile</a></li>
-            <li class="li-default li-a"><a href="#experience" class="default-a">Experiences</a></li>
-            <li class="li-default li-a"><a href="#abilities" class="default-a">Abilities</a></li>
-            <li class="li-default li-a"><a class="default-a" href="#projects">Projects</a></li>
-            <li class="li-default li-a"><a class="default-a" href="#contact">Contact</a></li>
+            <li class="li-default li-a active" id="prof" onclick="changeActive('prof')" ><a  class=" block-a default-a" href="#profile">Profile</a></li>
+            <li class="li-default li-a" id="exp" onclick="changeActive('exp')"><a href="#experience" class="block-a default-a">Experiences</a></li>
+            <li class="li-default li-a" id="abl" onclick="changeActive('abl')"><a href="#abilities"  class="block-a default-a">Abilities</a></li>
+            <li class="li-default li-a" id="proj"><a  class="default-a block-a " onclick="changeActive('proj')" href="#projects">Projects</a></li>
+            <li class="li-default li-a" id="conc"><a class="default-a block-a" onclick="changeActive('conc')" href="#contact">Contact</a></li>
         </ul>
     </div>
 </nav>
