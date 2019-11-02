@@ -6,6 +6,20 @@
     --main-font: Arial, Helvetica, sans-serif !important;
 }
 
+/* Overides */
+html, body,div, ul{
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
 
 /*!** Contenering **!*/
 .lead {
@@ -118,13 +132,6 @@ div.linked-in-btn input {
     margin: 0;
 }
 
-html, body,div, ul{
-    margin: 0;
-}
-
-html{
-    scroll-behavior: smooth;
-}
 
 .ul-style {
     padding: 0;
