@@ -8,15 +8,16 @@
 
     <script type="text/javascript">
         let idActiveEl = 'prof';
+
         function changeActive(isDiv) {
             if (isDiv === idActiveEl) return;
-            let latest = document.getElementById(''+idActiveEl);
-            if (latest && latest.classList){
+            let latest = document.getElementById('' + idActiveEl);
+            if (latest && latest.classList) {
                 latest.classList.toggle('active');
             }
 
             let elem = document.getElementById(isDiv);
-            if (elem && elem.classList){
+            if (elem && elem.classList) {
                 elem.classList.toggle('active');
             }
             idActiveEl = isDiv;
@@ -62,11 +63,11 @@
     <p class="lead-profile my-font">I'm a creative Full Stack Developer</p>
     <hr class="hr-light">
     <div class="grid-container text-centered">
-        <div class="row" style="margin-left: 15%">
-            <div class="col-3" style="width: 33%">
+        <div class="row margin-left-x15">
+            <div class="col-2">
                 <h3 class="headers text-centered margin-bottom-x5">About me</h3>
                 <p class="text-left default-text default-margin-text">
-                    I am an full stack  developer.
+                    I am an full stack developer.
                     I am a junior programmer with good knowledge of front-end and back-end techniques.
                     I love structure and order and I also stand for quality.
                     I love spending time on fixing little details and optimizing apps.
@@ -74,12 +75,11 @@
                     As the saying goes: 'two heads are better than one'.
                 </p>
             </div>
-            <div class="col-2" style="text-align: center;width: 25%">
+            <div class="col-1-2 text-centered">
                 <img src="img/portfolio_img.jpg" alt="photo" class="img-profile">
             </div>
-            <div class="col-3 margin-left-x2" style="width: 33.33%;">
-                <h3 class="headers text-left"
-                    style="padding-top: 0; margin-top: 0; text-align: left; margin-bottom: 5px"> Details</h3>
+            <div class="col-2 margin-left-x2">
+                <h3 class="headers text-left" id="details"> Details</h3>
                 <table>
                     <tr>
                         <th class="text-left weight-x6 default-text-size">Name :</th>
@@ -100,11 +100,10 @@
                         <td class="default-text default-weight"> Wrocław, Poland</td>
                     </tr>
                     <tr>
-                        <td style="text-align: left; padding: 0">
+                        <td class="text-left padding-0">
                             <div class="linked-in-btn">
                                 <INPUT type="submit" name="linkedInN" value="">
-                                <a class="linked-in-txt weight-x1 default-text default-a"
-                                   style="color: #3a3a3a; size: 200px"
+                                <a class="linked-in-txt weight-x1 default-text default-a darker-grey"
                                    href="https://www.linkedin.com/in/albert-piekielny/">Find Me!</a></div>
                         </td>
                     </tr>
@@ -636,13 +635,15 @@
                     </p>
                     <p class="text-left default-content-size my-font margin-top-p10 ">
                         <img src="img/linked.svg" alt="link" class="little-middle-icon">
-                        <a class="text-left info-text-size my-font main-color margin-left-x2" href="https://www.linkedin.com/in/albert-piekielny">
+                        <a class="text-left info-text-size my-font main-color margin-left-x2"
+                           href="https://www.linkedin.com/in/albert-piekielny">
                             https://www.linkedin.com/in/albert-piekielny
                         </a>
                     </p>
                     <p class="text-left default-content-size my-font margin-top-p10 ">
                         <img src="img/git.svg" alt="link" class="little-middle-icon">
-                        <a class="text-left info-text-size my-font main-color margin-left-x2" href="https://github.com/albi23">
+                        <a class="text-left info-text-size my-font main-color margin-left-x2"
+                           href="https://github.com/albi23">
                             https://github.com/albi23
                         </a>
                     </p>

@@ -78,6 +78,12 @@ html{
     background-color: #434242;
 }
 
+#details{
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 5px
+}
+
 .nav-container {
     float: right;
 }
@@ -176,6 +182,7 @@ div.linked-in-btn input {
 }
 
 .img-profile {
+    box-shadow: inset 0 0 1em var(--main-color);
     border-radius: 50%;
     width: 20vw;
     height: 20vw;
@@ -353,13 +360,7 @@ div.linked-in-btn input {
     font-weight: 600;
 }
 
-.padding-top-x20{
-    padding-top: 20px;
-}
 
-.padding-top-x10{
-    padding-top: 10px;
-}
 
 .padding-bottom-10{
     padding-bottom: 10%;
@@ -369,6 +370,17 @@ div.linked-in-btn input {
     border-color: #727878;
     border-top: 1px solid #eee;
     width: 70%;
+}
+.padding-0{
+    padding-top: 0;
+}
+
+.padding-top-x10{
+    padding-top: 10px;
+}
+
+.padding-top-x20{
+    padding-top: 20px;
 }
 
 .margin-left-x2 {
@@ -385,6 +397,10 @@ div.linked-in-btn input {
 
 .margin-left-x10 {
     margin-left: 10%;
+}
+
+.margin-left-x15 {
+    margin-left: 15%;
 }
 
 .margin-left-x25 {
@@ -407,9 +423,7 @@ div.linked-in-btn input {
 .margin-top-p10 {
     margin-top: 10px;
 }
-.width-x33 {
-    width: 33%;
-}
+
 
 .default-a{
     color: ghostwhite;
@@ -464,36 +478,39 @@ div.linked-in-btn input {
     width: 100%;
 }
 
-@media only screen and (min-width: 600px) {
-    /* For tablets: */
-    .col-s-1 {width: 8.33%;}
-    .col-s-2 {width: 16.66%;}
-    .col-s-3 {width: 25%;}
-    .col-s-4 {width: 33.33%;}
-    .col-s-5 {width: 41.66%;}
-    .col-s-6 {width: 50%;}
-    .col-s-7 {width: 58.33%;}
-    .col-s-8 {width: 66.66%;}
-    .col-s-9 {width: 75%;}
-    .col-s-10 {width: 83.33%;}
-    .col-s-11 {width: 91.66%;}
-    .col-s-12 {width: 100%;}
-}
-@media only screen and (min-width: 800px) {
-    /* For desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-}
+/*@media only screen and (min-width: 600px) {*/
+/*    !* For tablets: *!*/
+/*    .col-s-1 {width: 8.33%;}*/
+/*    .col-s-2 {width: 16.66%;}*/
+/*    .col-s-3 {width: 25%;}*/
+/*    .col-s-4 {width: 33.33%;}*/
+/*    .col-s-5 {width: 41.66%;}*/
+/*    .col-s-6 {width: 50%;}*/
+/*    .col-s-7 {width: 58.33%;}*/
+/*    .col-s-8 {width: 66.66%;}*/
+/*    .col-s-9 {width: 75%;}*/
+/*    .col-s-10 {width: 83.33%;}*/
+/*    .col-s-11 {width: 91.66%;}*/
+/*    .col-s-12 {width: 100%;}*/
+/*}*/
+/*@media only screen and (min-width: 800px) {*/
+/*    !* For desktop: *!*/
+/*    .col-1 {width: 8.33%;}*/
+/*    .col-2 {width: 16.66%;}*/
+/*    .col-3 {width: 25%;}*/
+/*    .col-4 {width: 33.33%;}*/
+/*    .col-5 {width: 41.66%;}*/
+/*    .col-6 {width: 50%;}*/
+/*    .col-7 {width: 58.33%;}*/
+/*    .col-8 {width: 66.66%;}*/
+/*    .col-9 {width: 75%;}*/
+/*    .col-10 {width: 83.33%;}*/
+/*    .col-11 {width: 91.66%;}*/
+/*    .col-12 {width: 100%;}*/
+/*}*/
+
+
+
 /* End section*/
 
 
@@ -560,6 +577,10 @@ div.linked-in-btn input {
 
 .light-grey{
     color: #727878;
+}
+
+.darker-grey{
+    color: #3a3a3a;
 }
 
 .little-dark-bg{
