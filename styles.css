@@ -541,7 +541,7 @@ div.linked-in-btn input {
 }
 
 @media screen and (max-width: 445px){
-    .sentence-font{color: darkblue}
+    .block-a{padding: 3vw 2vw 2vw;}
     .profile-name{font-size: 8vw}
     .abilities-content-font{font-size: 4vw;}
     .default-headers-size { font-size: 2.4vh}
