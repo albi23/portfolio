@@ -494,7 +494,7 @@ div.linked-in-btn input {
 [class*="col-"] {
     width: 100%;
 }
-
+/**/
 @media screen and (max-width: 900px) {
     #sections{
         top: 0;
@@ -529,20 +529,40 @@ div.linked-in-btn input {
     .default-text-size{ font-size: 3.5vw}
     .abilities-content-font{font-size: 3vw}
     .info-text-size{font-size: 3.5vw}
-    #infoTable{margin-left: 10%;}                   /* */
-    #aboutMe{font-size: 3.5vw;}                      /* */
-    #sections{font-size: 3.0vw; font-weight: 400}  /* */
-    #contentAbout{width: 50%}                       /**/
+    #infoTable{margin-left: 10%;}
+    #aboutMe{font-size: 3.5vw;}
+    #sections{font-size: 3.0vw; font-weight: 400}
+    #contentAbout{width: 50%}
     div.col-1-2{width: 25%;
         margin-left: 10%;
-    } /**/
+    }
     th.default-text-size{ font-size: 3.1vw}
     td.default-text{ font-size: 3.1vw}
 }
 
 @media screen and (max-width: 445px){
+    .sentence-font{color: darkblue}
+    .profile-name{font-size: 8vw}
     .abilities-content-font{font-size: 4vw;}
+    .default-headers-size { font-size: 2.4vh}
+    .default-content-size { font-size: 2.3vh}
+
+    .img-profile{
+        width: 30vw;
+        height: 30vw;
+        border-radius: 0;
+    }
+    #contentAbout{width: 90%}
+    #aboutMe{font-size: 5vw}
     div.col-3-s{width: 100%}
+    div.col-2-s{width: 50%}
+    div.col-1-2{
+        width: 35%;
+        margin-left: 0;
+        padding-top: 10%;
+    }
+    th.default-text-size{ font-size: 4.1vw}
+    td.default-text{ font-size: 4.1vw}
 }
 /* End section*/
 
@@ -586,9 +606,6 @@ div.linked-in-btn input {
     width: 50%;
 }
 
-.col-3-s {
-    width: 50%;
-}
 .col-4 {
     width: 66.664%;
 }
@@ -601,6 +618,14 @@ div.linked-in-btn input {
     width: 100%;
 }
 
+
+.col-3-s {
+    width: 50%;
+}
+
+.col-2-s{
+    width: 33.33%;
+}
 .grid-container * {
     box-sizing: border-box;
 }
