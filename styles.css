@@ -84,15 +84,27 @@ html{
     margin-bottom: 5px
 }
 
+#infoTable{
+    margin-left: 2%;
+}
+
+#aboutMe{
+    font-size: 1.5vw;
+}
+
+
 .nav-container {
     float: right;
 }
 
-.fix-1{
-    min-height: 50px;
-    position: absolute;
-    z-index: 0;
+.sentence-font{
+    font-family: 'Bad Script', serif;
 }
+/*.fix-1{*/
+/*    min-height: 1vh;*/
+/*    position: absolute;*/
+/*    z-index: 0;*/
+/*}*/
 .bg {
     min-width: 100%;
     min-height: 100vh;
@@ -125,7 +137,7 @@ div.linked-in-btn input {
 }
 
 .linked-in-txt{
-    font-size: 4.2vh;
+    font-size: 1.5vw;
 }
 
 .img_arrow {
@@ -151,9 +163,6 @@ div.linked-in-btn input {
     top: 50px;
     float: right;
     right: 5%;
-}
-
-.nav-sticky {
     z-index: 111;
 }
 
@@ -203,14 +212,15 @@ div.linked-in-btn input {
 }
 
 .middle-icon{
-    height: 8vh;
-    width: 8vh;
+    height: 6vw;
+    width: 6vw;
     max-height: 352px;
 }
 
 .little-middle-icon{
-    max-width: 6vh;
-    max-height: 6vh;
+    max-width: 7%;
+    max-height: 7%;
+    min-width: 7%;
 }
 
 .big-flex-icon{
@@ -313,7 +323,9 @@ div.linked-in-btn input {
     text-align: left;
     margin: auto;
 }
-
+.abilities-content-font{
+    font-size: 1.4vw;
+}
 .default-text-size {
     font-size: 1.5vw;
 }
@@ -360,7 +372,9 @@ div.linked-in-btn input {
     font-weight: 600;
 }
 
-
+.weight-x9 {
+    font-weight: 900;
+}
 
 .padding-bottom-10{
     padding-bottom: 10%;
@@ -443,6 +457,9 @@ div.linked-in-btn input {
 .default-a :link:active, .default-a:visited:active {
     color: ghostwhite;
 }
+.a-no-underline{
+    text-decoration: none;
+}
 
 .colored-link{
     color: var(--main-color);
@@ -478,39 +495,55 @@ div.linked-in-btn input {
     width: 100%;
 }
 
-/*@media only screen and (min-width: 600px) {*/
-/*    !* For tablets: *!*/
-/*    .col-s-1 {width: 8.33%;}*/
-/*    .col-s-2 {width: 16.66%;}*/
-/*    .col-s-3 {width: 25%;}*/
-/*    .col-s-4 {width: 33.33%;}*/
-/*    .col-s-5 {width: 41.66%;}*/
-/*    .col-s-6 {width: 50%;}*/
-/*    .col-s-7 {width: 58.33%;}*/
-/*    .col-s-8 {width: 66.66%;}*/
-/*    .col-s-9 {width: 75%;}*/
-/*    .col-s-10 {width: 83.33%;}*/
-/*    .col-s-11 {width: 91.66%;}*/
-/*    .col-s-12 {width: 100%;}*/
-/*}*/
-/*@media only screen and (min-width: 800px) {*/
-/*    !* For desktop: *!*/
-/*    .col-1 {width: 8.33%;}*/
-/*    .col-2 {width: 16.66%;}*/
-/*    .col-3 {width: 25%;}*/
-/*    .col-4 {width: 33.33%;}*/
-/*    .col-5 {width: 41.66%;}*/
-/*    .col-6 {width: 50%;}*/
-/*    .col-7 {width: 58.33%;}*/
-/*    .col-8 {width: 66.66%;}*/
-/*    .col-9 {width: 75%;}*/
-/*    .col-10 {width: 83.33%;}*/
-/*    .col-11 {width: 91.66%;}*/
-/*    .col-12 {width: 100%;}*/
-/*}*/
+@media screen and (max-width: 900px) {
+    #sections{
+        top: 0;
+        float: none;
+    }
+    .contact-name{font-size: 6.5vw}
+    .info-text-size{font-size: 2.5vw}
+    .ul-style{width: 100%;}
+    .li-a{float: left;}
+    .profile-name{font-size: 5.5vw;}
+    .lead-profile{font-size: 4vh;}
+    .linked-in-txt{font-size: 2.5vw}
+    .default-text-size {font-size: 2.5vw}
+    .education-header{font-size: 3.5vw}
+    .default-headers-size { font-size: 1.8vh}
+    .default-content-size{font-size: 2vh}
+    .abilities-content-font{font-size: 1.9vw}
+    #infoTable{margin-left: 20%;}
+    #aboutMe{font-size: 2.5vw;}
+    div.col-1-2{width: 60%}
+    th.default-text-size{ font-size: 2.1vw}
+    td.default-text{ font-size: 2.1vw}
+}
 
+@media screen and (max-width: 768px) {
+    .my-button{                                     /* */
+        padding-left: 15px;
+        padding-right: 15px;}
+    .headers{font-size: 5.5vw}
+    .linked-in-txt{font-size: 3.5vw}
+    .education-header{font-size: 4.5vw}
+    .default-text-size{ font-size: 3.5vw}
+    .abilities-content-font{font-size: 3vw}
+    .info-text-size{font-size: 3.5vw}
+    #infoTable{margin-left: 10%;}                   /* */
+    #aboutMe{font-size: 3.5vw;}                      /* */
+    #sections{font-size: 3.0vw; font-weight: 400}  /* */
+    #contentAbout{width: 50%}                       /**/
+    div.col-1-2{width: 25%;
+        margin-left: 10%;
+    } /**/
+    th.default-text-size{ font-size: 3.1vw}
+    td.default-text{ font-size: 3.1vw}
+}
 
-
+@media screen and (max-width: 445px){
+    .abilities-content-font{font-size: 4vw;}
+    div.col-3-s{width: 100%}
+}
 /* End section*/
 
 
@@ -553,6 +586,9 @@ div.linked-in-btn input {
     width: 50%;
 }
 
+.col-3-s {
+    width: 50%;
+}
 .col-4 {
     width: 66.664%;
 }
