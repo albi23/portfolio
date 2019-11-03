@@ -5,25 +5,8 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet2" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Bad Script' rel='stylesheet'>
+    <script type="text/javascript" src="main.js"></script>
     <title>Portfolio</title>
-
-    <script type="text/javascript">
-        let idActiveEl = 'prof';
-
-        function changeActive(isDiv) {
-            if (isDiv === idActiveEl) return;
-            let latest = document.getElementById('' + idActiveEl);
-            if (latest && latest.classList) {
-                latest.classList.toggle('active');
-            }
-
-            let elem = document.getElementById(isDiv);
-            if (elem && elem.classList) {
-                elem.classList.toggle('active');
-            }
-            idActiveEl = isDiv;
-        }
-    </script>
 </head>
 <body>
 
