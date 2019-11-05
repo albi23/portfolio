@@ -4,27 +4,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet2" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Bad Script' rel='stylesheet'>
+    <script type="text/javascript" src="main.js"></script>
     <title>Portfolio</title>
-
-    <script type="text/javascript">
-        let idActiveEl = 'prof';
-        function changeActive(isDiv) {
-            if (isDiv === idActiveEl) return;
-            let latest = document.getElementById(''+idActiveEl);
-            if (latest && latest.classList){
-                latest.classList.toggle('active');
-            }
-
-            let elem = document.getElementById(isDiv);
-            if (elem && elem.classList){
-                elem.classList.toggle('active');
-            }
-            idActiveEl = isDiv;
-        }
-    </script>
 </head>
 <body>
 
+
+<noscript>
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Please run Java Script or change browser to use full of functionality
+    </div>
+</noscript>
 <div class="bg"></div>
 <div class="container max-width">
     <div class="centered">
@@ -37,28 +29,34 @@
         </a>
     </div>
 </div>
-<nav class="nav-sticky" id="sections" >
-    <div class="nav-container">
-        <ul class="ul-style">
-            <li class="li-default li-a active" id="prof" onclick="changeActive('prof')" ><a  class=" block-a default-a" href="#profile">Profile</a></li>
-            <li class="li-default li-a" id="exp" onclick="changeActive('exp')"><a href="#experience" class="block-a default-a">Experiences</a></li>
-            <li class="li-default li-a" id="abl" onclick="changeActive('abl')"><a href="#abilities"  class="block-a default-a">Abilities</a></li>
-            <li class="li-default li-a" id="proj"><a  class="default-a block-a " onclick="changeActive('proj')" href="#projects">Projects</a></li>
-            <li class="li-default li-a" id="conc"><a class="default-a block-a" onclick="changeActive('conc')" href="#contact">Contact</a></li>
-        </ul>
-    </div>
+<nav id="sections">
+    <ul class="ul-style">
+        <li class="li-default li-a active" id="prof" onclick="changeActive('prof')">
+            <a class=" block-a default-a" href="#profile">Profile</a>
+        </li>
+        <li class="li-default li-a" id="exp" onclick="changeActive('exp')">
+            <a href="#experience" class="block-a default-a">Experiences</a>
+        </li>
+        <li class="li-default li-a" id="abl" onclick="changeActive('abl')">
+            <a href="#abilities" class="block-a default-a">Abilities</a>
+        </li>
+        <li class="li-default li-a" id="proj">
+            <a class="default-a block-a " onclick="changeActive('proj')" href="#projects">Projects</a></li>
+        <li class="li-default li-a" id="conc">
+            <a class="default-a block-a" onclick="changeActive('conc')" href="#contact">Contact</a></li>
+    </ul>
 </nav>
 
-<div id="profile" >
+<div id="profile" onmouseenter="changeActive('prof')">
     <h2 class="profile-name my-font">Profile</h2>
     <p class="lead-profile my-font">I'm a creative Full Stack Developer</p>
     <hr class="hr-light">
     <div class="grid-container text-centered">
-        <div class="row" style="margin-left: 15%">
-            <div class="col-3" style="width: 33%">
+        <div class="row margin-left-x15">
+            <div class="col-2" id="contentAbout">
                 <h3 class="headers text-centered margin-bottom-x5">About me</h3>
-                <p class="text-left default-text default-margin-text">
-                    I am an full stack  developer.
+                <p class="text-left default-text default-margin-text" id="aboutMe">
+                    I am an full stack developer.
                     I am a junior programmer with good knowledge of front-end and back-end techniques.
                     I love structure and order and I also stand for quality.
                     I love spending time on fixing little details and optimizing apps.
@@ -66,12 +64,11 @@
                     As the saying goes: 'two heads are better than one'.
                 </p>
             </div>
-            <div class="col-2" style="text-align: center;width: 25%">
+            <div class="col-1-2 text-centered">
                 <img src="img/portfolio_img.jpg" alt="photo" class="img-profile">
             </div>
-            <div class="col-3 margin-left-x2" style="width: 33.33%;">
-                <h3 class="headers text-left"
-                    style="padding-top: 0; margin-top: 0; text-align: left; margin-bottom: 5px"> Details</h3>
+            <div class="col-2-s" id="infoTable">
+                <h3 class="headers text-left" id="details"> Details</h3>
                 <table>
                     <tr>
                         <th class="text-left weight-x6 default-text-size">Name :</th>
@@ -92,11 +89,10 @@
                         <td class="default-text default-weight"> Wrocław, Poland</td>
                     </tr>
                     <tr>
-                        <td style="text-align: left; padding: 0">
+                        <td class="text-left padding-0">
                             <div class="linked-in-btn">
                                 <INPUT type="submit" name="linkedInN" value="">
-                                <a class="linked-in-txt weight-x1 default-text default-a"
-                                   style="color: #3a3a3a; size: 200px"
+                                <a class="linked-in-txt weight-x1 default-a darker-grey"
                                    href="https://www.linkedin.com/in/albert-piekielny/">Find Me!</a></div>
                         </td>
                     </tr>
@@ -105,16 +101,16 @@
         </div>
     </div>
 </div>
-<div id="experience" class="light-yellow-bg padding-bottom-10">
+<div id="experience" onmouseenter="changeActive('exp')" class="light-yellow-bg padding-bottom-10">
     <h2 class="profile-name my-font default-weight">Experience</h2>
-    <section class="my-font default-weight">
+    <section class="sentence-font default-weight">
         <p class="light-grey margin-left-x7 default-text-size">“Imagination is more important than knowledge.“</p>
         <p class="light-grey margin-left-x7 default-text-size">Albert Einstein</p>
         <hr class="hr-light">
     </section>
     <div class="grid-container text-centered padding-top-x20">
         <div class="row margin-left-x10">
-            <h2 class="default-weight education-header text-left ">Education</h2>
+            <h2 class="default-weight education-header text-left">Education</h2>
         </div>
         <div class="row margin-left-x10">
             <div class="row padding-top-x20">
@@ -131,7 +127,7 @@
         <div class="row margin-left-x10 padding-top-x10">
             <div class="row">
                 <div class="col-2">
-                    <p class="text-left text-left default-content-size my-font "> October 2017 - Present</p>
+                    <p class="text-left default-content-size my-font "> October 2017 - Present</p>
                 </div>
                 <div class="col-3 margin-left-x2">
                     <p class="text-left default-content-size my-font ">
@@ -219,10 +215,9 @@
         </div>
     </div>
 </div>
-
-<div id="abilities">
+<div id="abilities" onmouseenter="changeActive('abl')">
     <h2 class="profile-name my-font default-weight">Abilities</h2>
-    <section class="my-font default-weight">
+    <section class="sentence-font default-weight">
         <p class="light-grey margin-left-x7 default-text-size">“I find that the harder I work, the more luck I seem to
             have.”</p>
         <p class="light-grey margin-left-x7 default-text-size">Thomas Jefferson</p>
@@ -235,183 +230,179 @@
         <!--        Begin stars section-->
         <div class="row margin-left-x10">
             <div class="row padding-top-x20">
-                <div class="col-3">
+                <div class="col-3-s">
                     <div class="row bg-shadow">
-                        <div class="col-3 text-left main-color">JSON</div>
+                        <div class="col-3 text-left main-color abilities-content-font">JSON</div>
                         <div class="col-3">
-                            <span class="full-stars main-color">★★★★★</span>
+                            <span class="full-stars main-color abilities-content-font">★★★★★</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3-s">
                     <div class="row bg-shadow">
-                        <div class="col-3 text-left main-color">Java Script</div>
+                        <div class="col-3 text-left main-color abilities-content-font">Java Script</div>
                         <div class="col-3">
-                            <span class="full-stars main-color">★★★★</span>
-                            <span class="full-stars lighter-grey">★</span>
+                            <span class="full-stars main-color abilities-content-font">★★★★</span>
+                            <span class="full-stars lighter-grey abilities-content-font">★</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="row padding-top-x10">
-                <div class="col-3">
+                <div class="col-3-s">
                     <div class="row bg-shadow">
-                        <div class="col-3 text-left main-color">Bash</div>
+                        <div class="col-3 text-left main-color abilities-content-font">Bash</div>
                         <div class="col-3" style="text-align: center">
-                            <span class="full-stars main-color">★★★★</span>
-                            <span class="full-stars lighter-grey">★</span>
+                            <span class="full-stars main-color abilities-content-font">★★★★</span>
+                            <span class="full-stars lighter-grey abilities-content-font">★</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3-s">
                     <div class="row bg-shadow">
-                        <div class="col-3 text-left main-color">MVC Pattern</div>
+                        <div class="col-3 text-left main-color abilities-content-font">MVC Pattern</div>
                         <div class="col-3">
-                            <span class="full-stars main-color">★★★★</span>
-                            <span class="full-stars lighter-grey">★</span>
+                            <span class="full-stars main-color abilities-content-font">★★★★</span>
+                            <span class="full-stars lighter-grey abilities-content-font">★</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="row padding-top-x10">
-                <div class="col-3">
+                <div class="col-3-s">
                     <div class="row bg-shadow">
-                        <div class="col-3 text-left main-color">Linux</div>
+                        <div class="col-3 text-left main-color abilities-content-font">Linux</div>
                         <div class="col-3" style="text-align: center">
-                            <span class="full-stars main-color">★★★★</span>
-                            <span class="full-stars lighter-grey">★</span>
+                            <span class="full-stars main-color abilities-content-font">★★★★</span>
+                            <span class="full-stars lighter-grey abilities-content-font">★</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3-s">
                     <div class="row bg-shadow">
-                        <div class="col-3 text-left main-color">Command line Inteface</div>
+                        <div class="col-3 text-left main-color abilities-content-font">Command line Inteface</div>
                         <div class="col-3">
-                            <span class="full-stars main-color">★★★★</span>
-                            <span class="full-stars lighter-grey">★</span>
+                            <span class="full-stars main-color abilities-content-font">★★★★</span>
+                            <span class="full-stars lighter-grey abilities-content-font">★</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="row padding-top-x10">
-                <div class="col-3">
+                <div class="col-3-s">
                     <div class="row bg-shadow">
-                        <div class="col-3 text-left main-color">MySql</div>
+                        <div class="col-3 text-left main-color abilities-content-font">MySql</div>
                         <div class="col-3" style="text-align: center">
-                            <span class="full-stars main-color">★★★★</span>
-                            <span class="full-stars lighter-grey">★</span>
+                            <span class="full-stars main-color abilities-content-font">★★★★</span>
+                            <span class="full-stars lighter-grey abilities-content-font">★</span>
 
                         </div>
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3-s">
                     <div class="row bg-shadow">
-                        <div class="col-3 text-left main-color">CSS</div>
+                        <div class="col-3 text-left main-color abilities-content-font">CSS</div>
                         <div class="col-3">
-                            <span class="full-stars main-color">★★★★</span>
-                            <span class="full-stars lighter-grey">★</span>
+                            <span class="full-stars main-color abilities-content-font">★★★★</span>
+                            <span class="full-stars lighter-grey abilities-content-font">★</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="row padding-top-x10">
-                <div class="col-3">
+                <div class="col-3-s">
                     <div class="row bg-shadow">
-                        <div class="col-3 text-left main-color">Java</div>
+                        <div class="col-3 text-left main-color abilities-content-font">Java</div>
                         <div class="col-3" style="text-align: center">
-                            <span class="full-stars main-color">★★★★</span>
-                            <span class="full-stars lighter-grey">★</span>
+                            <span class="full-stars main-color abilities-content-font">★★★★</span>
+                            <span class="full-stars lighter-grey abilities-content-font">★</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3-s">
                     <div class="row bg-shadow">
-                        <div class="col-3 text-left main-color">Html</div>
+                        <div class="col-3 text-left main-color abilities-content-font">Html</div>
                         <div class="col-3">
-
-                            <span class="full-stars main-color">★★★★</span>
-                            <span class="full-stars lighter-grey">★</span>
-
+                            <span class="full-stars main-color abilities-content-font">★★★★</span>
+                            <span class="full-stars lighter-grey abilities-content-font">★</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="row padding-top-x10">
-                <div class="col-3">
+                <div class="col-3-s">
                     <div class="row bg-shadow">
-                        <div class="col-3 text-left main-color">Maven</div>
+                        <div class="col-3 text-left main-color abilities-content-font">Maven</div>
                         <div class="col-3" style="text-align: center">
-                            <span class="full-stars main-color">★★★★</span>
-                            <span class="full-stars lighter-grey">★</span>
+                            <span class="full-stars main-color abilities-content-font">★★★★</span>
+                            <span class="full-stars lighter-grey abilities-content-font">★</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3-s">
                     <div class="row bg-shadow">
-                        <div class="col-3 text-left main-color">UML</div>
+                        <div class="col-3 text-left main-color abilities-content-font">UML</div>
                         <div class="col-3">
-                            <span class="full-stars main-color">★★★</span>
-                            <span class="full-stars lighter-grey">★★</span>
+                            <span class="full-stars main-color abilities-content-font">★★★</span>
+                            <span class="full-stars lighter-grey abilities-content-font">★★</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="row padding-top-x10">
-                <div class="col-3">
+                <div class="col-3-s">
                     <div class="row bg-shadow">
-                        <div class="col-3 text-left main-color">Angular 8+</div>
+                        <div class="col-3 text-left main-color abilities-content-font">Angular 8+</div>
                         <div class="col-3" style="text-align: center">
-                            <span class="full-stars main-color">★★★★</span>
-                            <span class="full-stars lighter-grey">★</span>
+                            <span class="full-stars main-color abilities-content-font">★★★★</span>
+                            <span class="full-stars lighter-grey abilities-content-font">★</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3-s">
                     <div class="row bg-shadow">
-                        <div class="col-3 text-left main-color">JQuerry</div>
+                        <div class="col-3 text-left main-color abilities-content-font">JQuerry</div>
                         <div class="col-3">
-                            <span class="full-stars main-color">★★★</span>
-                            <span class="full-stars lighter-grey">★★</span>
+                            <span class="full-stars main-color abilities-content-font">★★★</span>
+                            <span class="full-stars lighter-grey abilities-content-font">★★</span>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row padding-top-x10">
-                <div class="col-3">
+                <div class="col-3-s">
                     <div class="row bg-shadow">
-                        <div class="col-3 text-left main-color">Docker</div>
+                        <div class="col-3 text-left main-color abilities-content-font">Docker</div>
                         <div class="col-3" style="text-align: center">
-                            <span class="full-stars main-color">★★★★</span>
-                            <span class="full-stars lighter-grey">★</span>
-
+                            <span class="full-stars main-color abilities-content-font">★★★★</span>
+                            <span class="full-stars lighter-grey abilities-content-font">★</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3-s">
                     <div class="row bg-shadow">
-                        <div class="col-3 text-left main-color">XML</div>
+                        <div class="col-3 text-left main-color abilities-content-font">XML</div>
                         <div class="col-3">
-                            <span class="full-stars main-color">★★★</span>
-                            <span class="full-stars lighter-grey">★★</span>
+                            <span class="full-stars main-color abilities-content-font">★★★</span>
+                            <span class="full-stars lighter-grey abilities-content-font">★★</span>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
         <!--        End stars section-->
     </div>
@@ -423,41 +414,20 @@
             </div>
             <div class="row margin-left-x10">
                 <div class="row padding-top-x20">
-                    <div class="col-3">
+                    <div class="col-3-s">
                         <div class="row bg-shadow">
-                            <div class="col-3 text-left main-color">IntelliJ IDEA</div>
+                            <div class="col-3 text-left main-color abilities-content-font">IntelliJ IDEA</div>
                             <div class="col-3">
-                                <span class="full-stars main-color">★★★★★</span>
+                                <span class="full-stars main-color abilities-content-font">★★★★★</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3-s">
                         <div class="row bg-shadow">
-                            <div class="col-3 text-left main-color">Git / Git Flow</div>
+                            <div class="col-3 text-left main-color abilities-content-font">Git / Git Flow</div>
                             <div class="col-3">
-                                <span class="full-stars main-color">★★★★★</span>
-                                <span class="full-stars lighter-grey">★</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row margin-left-x10">
-                <div class="row padding-top-x20">
-                    <div class="col-3">
-                        <div class="row bg-shadow">
-                            <div class="col-3 text-left main-color">Notepad++</div>
-                            <div class="col-3">
-                                <span class="full-stars main-color">★★★★★</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="row bg-shadow">
-                            <div class="col-3 text-left main-color">Android Studio</div>
-                            <div class="col-3">
-                                <span class="full-stars main-color">★★★★★</span>
-                                <span class="full-stars lighter-grey">★</span>
+                                <span class="full-stars main-color abilities-content-font">★★★★</span>
+                                <span class="full-stars lighter-grey abilities-content-font">★</span>
                             </div>
                         </div>
                     </div>
@@ -465,21 +435,42 @@
             </div>
             <div class="row margin-left-x10">
                 <div class="row padding-top-x20">
-                    <div class="col-3">
+                    <div class="col-3-s">
                         <div class="row bg-shadow">
-                            <div class="col-3 text-left main-color">Windows</div>
+                            <div class="col-3 text-left main-color abilities-content-font">Notepad++</div>
                             <div class="col-3">
-                                <span class="full-stars main-color">★★★★★</span>
+                                <span class="full-stars main-color abilities-content-font">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3-s">
+                        <div class="row bg-shadow">
+                            <div class="col-3 text-left main-color abilities-content-font">Android Studio</div>
+                            <div class="col-3">
+                                <span class="full-stars main-color abilities-content-font">★★★★</span>
+                                <span class="full-stars lighter-grey abilities-content-font">★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row margin-left-x10">
+                <div class="row padding-top-x20">
+                    <div class="col-3-s">
+                        <div class="row bg-shadow">
+                            <div class="col-3 text-left main-color abilities-content-font">Windows</div>
+                            <div class="col-3">
+                                <span class="full-stars main-color abilities-content-font">★★★★★</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-3">
+                    <div class="col-3-s">
                         <div class="row bg-shadow">
-                            <div class="col-3 text-left main-color">DataGrip</div>
+                            <div class="col-3 text-left main-color abilities-content-font">DataGrip</div>
                             <div class="col-3">
-                                <span class="full-stars main-color">★★★★★</span>
-                                <span class="full-stars lighter-grey">★</span>
+                                <span class="full-stars main-color abilities-content-font">★★★★</span>
+                                <span class="full-stars lighter-grey abilities-content-font">★</span>
                             </div>
                         </div>
                     </div>
@@ -487,21 +478,21 @@
             </div>
             <div class="row margin-left-x10">
                 <div class="row padding-top-x20">
-                    <div class="col-3">
+                    <div class="col-3-s">
                         <div class="row bg-shadow">
-                            <div class="col-3 text-left main-color">Google Chrome</div>
+                            <div class="col-3 text-left main-color abilities-content-font">Google Chrome</div>
                             <div class="col-3">
-                                <span class="full-stars main-color">★★★★★</span>
+                                <span class="full-stars main-color abilities-content-font">★★★★★</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-3">
+                    <div class="col-3-s">
                         <div class="row bg-shadow">
-                            <div class="col-3 text-left main-color">Subversion</div>
+                            <div class="col-3 text-left main-color abilities-content-font">Subversion</div>
                             <div class="col-3">
-                                <span class="full-stars main-color">★★★★★</span>
-                                <span class="full-stars lighter-grey">★</span>
+                                <span class="full-stars main-color abilities-content-font">★★★★</span>
+                                <span class="full-stars lighter-grey abilities-content-font">★</span>
                             </div>
                         </div>
                     </div>
@@ -509,21 +500,21 @@
             </div>
             <div class="row margin-left-x10">
                 <div class="row padding-top-x20">
-                    <div class="col-3">
+                    <div class="col-3-s">
                         <div class="row bg-shadow">
-                            <div class="col-3 text-left main-color">WebStorm</div>
+                            <div class="col-3 text-left main-color abilities-content-font">WebStorm</div>
                             <div class="col-3">
-                                <span class="full-stars main-color">★★★★★</span>
+                                <span class="full-stars main-color abilities-content-font">★★★★★</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-3">
+                    <div class="col-3-s">
                         <div class="row bg-shadow">
-                            <div class="col-3 text-left main-color">Atlassian/ Jira</div>
+                            <div class="col-3 text-left main-color abilities-content-font">Atlassian/ Jira</div>
                             <div class="col-3">
-                                <span class="full-stars main-color">★★★★★</span>
-                                <span class="full-stars lighter-grey">★</span>
+                                <span class="full-stars main-color abilities-content-font">★★★★</span>
+                                <span class="full-stars lighter-grey abilities-content-font">★</span>
                             </div>
                         </div>
                     </div>
@@ -531,21 +522,21 @@
             </div>
             <div class="row margin-left-x10">
                 <div class="row padding-top-x20">
-                    <div class="col-3">
+                    <div class="col-3-s">
                         <div class="row bg-shadow">
-                            <div class="col-3 text-left main-color">Libre Office</div>
+                            <div class="col-3 text-left main-color abilities-content-font">Libre Office</div>
                             <div class="col-3">
-                                <span class="full-stars main-color">★★★★★</span>
+                                <span class="full-stars main-color abilities-content-font">★★★★★</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-3">
+                    <div class="col-3-s">
                         <div class="row bg-shadow">
-                            <div class="col-3 text-left main-color">WildFly Management</div>
+                            <div class="col-3 text-left main-color abilities-content-font">WildFly Management</div>
                             <div class="col-3">
-                                <span class="full-stars main-color">★★★★★</span>
-                                <span class="full-stars lighter-grey">★</span>
+                                <span class="full-stars main-color abilities-content-font">★★★★</span>
+                                <span class="full-stars lighter-grey abilities-content-font">★</span>
                             </div>
                         </div>
                     </div>
@@ -554,10 +545,9 @@
         </div>
     </section>
 </div>
-
-<div id="projects" class="light-yellow-bg padding-bottom-10">
+<div id="projects" onmouseenter="changeActive('proj')" class="light-yellow-bg padding-bottom-10">
     <h2 class="profile-name my-font default-weight">Projects</h2>
-    <section class="my-font default-weight">
+    <section class="sentence-font default-weight">
         <p class="light-grey margin-left-x7 default-text-size">“Great minds discuss ideas, Average minds discuss events,
             Small minds discuss people.“</p>
         <p class="light-grey margin-left-x7 default-text-size">Eleanor Roosevelt</p>
@@ -573,7 +563,7 @@
                                 <img src="img/java.png" class="big-flex-icon" title="Barcode Generator" alt="Image">
                                 <div class="top-right">
                                     <div class="middle-icon lighter-main-bg-color">
-                                        <img src="img/newWindow.svg" class="middle-flex-icon" alt="link">
+                                        <img src="img/newWindow.svg" alt="link">
                                     </div>
                                 </div>
                             </a>
@@ -586,7 +576,7 @@
                                 <img src="img/spboot.png" class="big-flex-icon" title="Bank Controller" alt="Image">
                                 <div class="top-right">
                                     <div class="middle-icon lighter-main-bg-color">
-                                        <img src="img/newWindow.svg" class="middle-flex-icon" alt="link">
+                                        <img src="img/newWindow.svg" alt="link">
                                     </div>
                                 </div>
                             </a>
@@ -602,7 +592,7 @@
                                      alt="Image">
                                 <div class="top-right">
                                     <div class="middle-icon lighter-main-bg-color">
-                                        <img src="img/newWindow.svg" class="middle-flex-icon" alt="link">
+                                        <img src="img/newWindow.svg" alt="link">
                                     </div>
                                 </div>
                             </a>
@@ -614,29 +604,30 @@
         </div>
     </div>
 </div>
-<div class=" max-width light-yellow-bg fix-1"></div>
 <footer>
-    <div id="contact" class="padding-bottom-10 ">
+    <div id="contact" onmouseenter="changeActive('conc')" class="padding-bottom-10 ">
         <div class="">
             <h2 class="contact-name my-font default-weight" style="color: whitesmoke">Contact</h2>
         </div>
         <hr class="hr-light margin-top-x10">
         <div class="grid-container text-centered padding-top-x20">
             <div class="row margin-left-x10">
-                <div class="col-3">
+                <div class="col-5 text-left">
                     <p class="text-left default-content-size my-font margin-top-p10 ">
                         <img src="img/email.svg" alt="link" class="little-middle-icon">
                         <i class="text-left info-text-size my-font main-color margin-left-x2">albert.piekielny@blue-veery.com</i>
                     </p>
                     <p class="text-left default-content-size my-font margin-top-p10 ">
                         <img src="img/linked.svg" alt="link" class="little-middle-icon">
-                        <a class="text-left info-text-size my-font main-color margin-left-x2" href="https://www.linkedin.com/in/albert-piekielny">
+                        <a class="text-left info-text-size my-font main-color margin-left-x2 a-no-underline"
+                           href="https://www.linkedin.com/in/albert-piekielny">
                             https://www.linkedin.com/in/albert-piekielny
                         </a>
                     </p>
                     <p class="text-left default-content-size my-font margin-top-p10 ">
                         <img src="img/git.svg" alt="link" class="little-middle-icon">
-                        <a class="text-left info-text-size my-font main-color margin-left-x2" href="https://github.com/albi23">
+                        <a class="text-left info-text-size my-font main-color margin-left-x2 a-no-underline"
+                           href="https://github.com/albi23">
                             https://github.com/albi23
                         </a>
                     </p>

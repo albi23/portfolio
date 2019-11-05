@@ -6,7 +6,7 @@
     --main-font: Arial, Helvetica, sans-serif !important;
 }
 
-/* Overides */
+/** Overides **/
 html, body,div, ul{
     margin: 0;
 }
@@ -18,8 +18,6 @@ html{
 * {
     box-sizing: border-box;
 }
-
-
 
 /*!** Contenering **!*/
 .lead {
@@ -80,15 +78,33 @@ html{
     background-color: #434242;
 }
 
+#details{
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 5px
+}
+
+#infoTable{
+    margin-left: 2%;
+}
+
+#aboutMe{
+    font-size: 1.5vw;
+}
+
+
 .nav-container {
     float: right;
 }
 
-.fix-1{
-    min-height: 50px;
-    position: absolute;
-    z-index: 0;
+.sentence-font{
+    font-family: 'Bad Script', serif;
 }
+/*.fix-1{*/
+/*    min-height: 1vh;*/
+/*    position: absolute;*/
+/*    z-index: 0;*/
+/*}*/
 .bg {
     min-width: 100%;
     min-height: 100vh;
@@ -100,17 +116,16 @@ html{
 
 .my-button {
     background-color: hsla(196, 77%, 10%, 0.82);
-    border: none;
     color: white;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    max-width: 60px;
-    max-height: 60px;
-    font-size: 16px;
+    padding-top: 2vh;
     cursor: pointer;
-    margin-bottom: 0;
-    padding: 10px 30px;
+    position: relative;
+    margin: 0;
+    min-width: 9vw;
+
 }
 
 div.linked-in-btn input {
@@ -122,15 +137,17 @@ div.linked-in-btn input {
 }
 
 .linked-in-txt{
-    font-size: 4.2vh;
+    font-size: 1.5vw;
 }
 
 .img_arrow {
     -webkit-filter: invert(100%);
     max-width: 60px;
     max-height: 60px;
+    width: 9vh;
     margin: 0;
 }
+
 
 
 .ul-style {
@@ -146,9 +163,6 @@ div.linked-in-btn input {
     top: 50px;
     float: right;
     right: 5%;
-}
-
-.nav-sticky {
     z-index: 111;
 }
 
@@ -176,7 +190,12 @@ div.linked-in-btn input {
     background-color: var(--main-color);
 }
 
+.shadow-text:hover{
+    text-shadow: 2px 2px 10px #FF0000;
+}
+
 .img-profile {
+    box-shadow: inset 0 0 1em var(--main-color);
     border-radius: 50%;
     width: 20vw;
     height: 20vw;
@@ -190,25 +209,30 @@ div.linked-in-btn input {
 }
 
 .middle-flex-icon{
-    min-height: 6vh;
-    min-width: 6vh;
+    height: 6vh;
+    width: 6vh;
+    max-height: 352px;
+
 }
 
 .middle-icon{
-    max-width: 8vh;
-    max-height: 8vh;
-    min-height: 8vh;
-    min-width: 8vh;
+    height: 6vw;
+    width: 6vw;
+    max-height: 352px;
 }
 
 .little-middle-icon{
-    max-width: 6vh;
-    max-height: 6vh;
+    max-width: 7%;
+    max-height: 7%;
+    min-width: 7%;
 }
 
 .big-flex-icon{
-    max-width: 35vh;
-    max-height: 35vh
+    max-width: 35vw;
+    max-height: 300px;
+    height: 15vw;
+    width: 15vw;
+    /*max-height: 35vh*/
 }
 /****** Positioning *****/
 .centered {
@@ -266,7 +290,29 @@ div.linked-in-btn input {
     color: var(--main-color);
     font-size: 2.5vw;
 }
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #ff9800;
+    color: white;
+}
 
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
 
 /* Customing **/
 .lighten {
@@ -303,7 +349,9 @@ div.linked-in-btn input {
     text-align: left;
     margin: auto;
 }
-
+.abilities-content-font{
+    font-size: 1.4vw;
+}
 .default-text-size {
     font-size: 1.5vw;
 }
@@ -350,12 +398,8 @@ div.linked-in-btn input {
     font-weight: 600;
 }
 
-.padding-top-x20{
-    padding-top: 20px;
-}
-
-.padding-top-x10{
-    padding-top: 10px;
+.weight-x9 {
+    font-weight: 900;
 }
 
 .padding-bottom-10{
@@ -366,6 +410,17 @@ div.linked-in-btn input {
     border-color: #727878;
     border-top: 1px solid #eee;
     width: 70%;
+}
+.padding-0{
+    padding-top: 0;
+}
+
+.padding-top-x10{
+    padding-top: 10px;
+}
+
+.padding-top-x20{
+    padding-top: 20px;
 }
 
 .margin-left-x2 {
@@ -382,6 +437,10 @@ div.linked-in-btn input {
 
 .margin-left-x10 {
     margin-left: 10%;
+}
+
+.margin-left-x15 {
+    margin-left: 15%;
 }
 
 .margin-left-x25 {
@@ -404,14 +463,17 @@ div.linked-in-btn input {
 .margin-top-p10 {
     margin-top: 10px;
 }
-.width-x33 {
-    width: 33%;
-}
+
 
 .default-a{
     color: ghostwhite;
     text-decoration: none;
     cursor: pointer;
+    min-width: 9vw;
+
+}
+.default-width-a{
+    min-width: 4vw;
 }
 
 .block-a{
@@ -420,6 +482,9 @@ div.linked-in-btn input {
 }
 .default-a :link:active, .default-a:visited:active {
     color: ghostwhite;
+}
+.a-no-underline{
+    text-decoration: none;
 }
 
 .colored-link{
@@ -447,6 +512,86 @@ div.linked-in-btn input {
         top: 30px;
     }
 }
+
+
+/** Responisive settings**/
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+/**/
+@media screen and (max-width: 900px) {
+    #sections{
+        top: 0;
+        float: none;
+    }
+    .contact-name{font-size: 6.5vw}
+    .info-text-size{font-size: 2.5vw}
+    .ul-style{width: 100%;}
+    .li-a{float: left;}
+    .profile-name{font-size: 5.5vw;}
+    .lead-profile{font-size: 4vh;}
+    .linked-in-txt{font-size: 2.5vw}
+    .default-text-size {font-size: 2.5vw}
+    .education-header{font-size: 3.5vw}
+    .default-headers-size { font-size: 1.8vh}
+    .default-content-size{font-size: 2vh}
+    .abilities-content-font{font-size: 1.9vw}
+    #infoTable{margin-left: 20%;}
+    #aboutMe{font-size: 2.5vw;}
+    div.col-1-2{width: 60%}
+    th.default-text-size{ font-size: 2.1vw}
+    td.default-text{ font-size: 2.1vw}
+}
+
+@media screen and (max-width: 768px) {
+    .my-button{                                     /* */
+        padding-left: 15px;
+        padding-right: 15px;}
+    .headers{font-size: 5.5vw}
+    .linked-in-txt{font-size: 3.5vw}
+    .education-header{font-size: 4.5vw}
+    .default-text-size{ font-size: 3.5vw}
+    .abilities-content-font{font-size: 3vw}
+    .info-text-size{font-size: 3.5vw}
+    #infoTable{margin-left: 10%;}
+    #aboutMe{font-size: 3.5vw;}
+    #sections{font-size: 3.0vw; font-weight: 400}
+    #contentAbout{width: 50%}
+    div.col-1-2{width: 25%;
+        margin-left: 10%;
+    }
+    th.default-text-size{ font-size: 3.1vw}
+    td.default-text{ font-size: 3.1vw}
+}
+
+@media screen and (max-width: 445px){
+    .block-a{padding: 3vw 2vw 2vw;}
+    .profile-name{font-size: 8vw}
+    .abilities-content-font{font-size: 4vw;}
+    .default-headers-size { font-size: 2.4vh}
+    .default-content-size { font-size: 2.3vh}
+
+    .img-profile{
+        width: 30vw;
+        height: 30vw;
+        border-radius: 0;
+    }
+    #contentAbout{width: 90%}
+    #aboutMe{font-size: 5vw}
+    div.col-3-s{width: 100%}
+    div.col-2-s{width: 50%}
+    div.col-1-2{
+        width: 35%;
+        margin-left: 0;
+        padding-top: 10%;
+    }
+    th.default-text-size{ font-size: 4.1vw}
+    td.default-text{ font-size: 4.1vw}
+}
+/* End section*/
+
 
 /*** Boxing ***/
 .grid-container {
@@ -499,6 +644,14 @@ div.linked-in-btn input {
     width: 100%;
 }
 
+
+.col-3-s {
+    width: 50%;
+}
+
+.col-2-s{
+    width: 33.33%;
+}
 .grid-container * {
     box-sizing: border-box;
 }
@@ -511,6 +664,10 @@ div.linked-in-btn input {
 
 .light-grey{
     color: #727878;
+}
+
+.darker-grey{
+    color: #3a3a3a;
 }
 
 .little-dark-bg{
