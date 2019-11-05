@@ -1,9 +1,9 @@
-
 let idActiveEl = "prof";
 
 function changeActive(isDiv) {
-    console.log(window)
-    if (isDiv === idActiveEl) {return;}
+    if (isDiv === idActiveEl) {
+        return;
+    }
     let latest = document.getElementById(String(idActiveEl));
     if (latest && latest.classList) {
         latest.classList.toggle("active");
