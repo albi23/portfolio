@@ -1,3 +1,7 @@
+window.onload = ()=>{
+document.getElementById("age").innerText = (new Date().getFullYear() -1998)+ " years"
+}
+
 let idActiveEl = "prof";
 
 function changeActive(isDiv) {
@@ -15,3 +19,4 @@ function changeActive(isDiv) {
     }
     idActiveEl = isDiv;
 }
+
